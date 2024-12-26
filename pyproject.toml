@@ -1,20 +1,20 @@
-[tool.poetry]
+[project]
 name = "spotify2ytmusic"
 version = "0.1.0"
 description = "Copy Spotify playlists to YTMusic/YouTube Music"
-authors = ["Sean Reifschneider <jafo00@gmail.com>"]
-license = "Creative Commons Zero v1.0 Universal"
+authors = [{ name = "Sean Reifschneider", email = "jafo00@gmail.com" }]
+license = { text = "Creative Commons Zero v1.0 Universal" }
 readme = "README.md"
-
-[tool.poetry.dependencies]
-python = "^3.10"
-ytmusicapi = "*"
+dependencies = [
+    "ytmusicapi",
+]
+requires-python = ">=3.10,<3.14"
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
 
-[tool.poetry.scripts]
+[project.scripts]
 s2yt_gui = "spotify2ytmusic.gui:main"
 s2yt_load_liked = "spotify2ytmusic.cli:load_liked"
 s2yt_load_liked_albums = "spotify2ytmusic.cli:load_liked_albums"
@@ -39,3 +39,6 @@ requires = [
   'ytmusicapi',
   'tk',
 ]
+
+[dependency-groups]
+dev = ["ruff>=0.8.4"]

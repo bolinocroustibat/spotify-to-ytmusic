@@ -327,9 +327,9 @@ def lookup_song(
 
                     # From here, we search for videos reposting the song. They often contain the name of it and the artist. Like with 'Nekfeu - Ecrire'.
                     for new_song in new_songs:
-                        new_song_title = new_song[
-                            "title"
-                        ].lower()  # People sometimes mess up the capitalization in the title
+                        new_song_title = (
+                            new_song["title"].lower()
+                        )  # People sometimes mess up the capitalization in the title
                         if (
                             track_name in new_song_title
                             and artist_name in new_song_title

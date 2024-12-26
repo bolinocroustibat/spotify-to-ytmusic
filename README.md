@@ -15,7 +15,7 @@ project.
 
 ## Install Python (you may already have it)
 
-You will need a somewhat recent version of Python  3.10 and above are known to work,
+You will need a somewhat recent version of Python 3.10 and above are known to work,
 3.8-3.10 might work.
 
 ### For Windows
@@ -28,7 +28,7 @@ You can also use choco to install it: `choco install python`
 
 Run:
 
-```
+```shell
 brew install python
 brew install python-tk
 ```

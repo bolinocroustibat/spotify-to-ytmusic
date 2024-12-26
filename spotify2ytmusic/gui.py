@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import os
 import subprocess
 import sys
@@ -246,7 +244,7 @@ class Window:
         self.var_algo = tk.IntVar()
         self.var_algo.set(0)
 
-        self.algo_label = create_label(self.tab7, text=f"Algorithm: ")
+        self.algo_label = create_label(self.tab7, text="Algorithm: ")
         self.algo_label.pack(anchor=tk.CENTER, expand=True)
 
         menu_algo = tk.OptionMenu(
@@ -324,7 +322,7 @@ class Window:
                             shell=True,
                             stdout=subprocess.PIPE,
                         )
-                    except:
+                    except Exception:
                         subprocess.call(
                             "xterm -e ytmusicapi oauth",
                             shell=True,

@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import sys
 from argparse import ArgumentParser
 import pprint
@@ -143,7 +141,7 @@ def load_liked_albums():
 
     args = parse_arguments()
 
-    spotify_pls = backend.load_playlists_json()
+    # spotify_pls = backend.load_playlists_json()
 
     backend.copier(
         backend.iter_spotify_liked_albums(

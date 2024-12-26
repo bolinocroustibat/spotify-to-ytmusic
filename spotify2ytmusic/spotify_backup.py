@@ -1,8 +1,16 @@
-#!/usr/bin/env python3
-
 ## A modified version of spotify-backup by 'caseychu' from https://github.com/caseychu/spotify-backup
 
-import codecs, http.client, http.server, json, re, sys, time, urllib.error, urllib.parse, urllib.request, webbrowser
+import codecs
+import http.client
+import http.server
+import json
+import re
+import sys
+import time
+import urllib.error
+import urllib.parse
+import urllib.request
+import webbrowser
 
 
 class SpotifyAPI:

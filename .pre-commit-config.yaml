@@ -7,7 +7,7 @@ repos:
 #    pass_filenames: false
 #    language: system
 #    types: [python]
--   repo: https://github.com/pre-commit/pre-commit-hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.5.0  # Use the ref you want to point at
     hooks:
     -   id: trailing-whitespace
@@ -18,8 +18,12 @@ repos:
     -   id: detect-aws-credentials
     -   id: detect-private-key
     -   id: requirements-txt-fixer
-- repo: https://github.com/psf/black
-  rev: 23.10.1  # Use the specific version of Black you want to run
-  hooks:
-  - id: black
-    language: python
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.8.4 # Ruff version
+    hooks:
+      # Run the linter
+      - id: ruff
+        args: [--fix, --exit-non-zero-on-fix, --extend-select, I]
+      # Run the formatter
+      - id: ruff-format
+
